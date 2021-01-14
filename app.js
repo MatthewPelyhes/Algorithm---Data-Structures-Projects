@@ -6,16 +6,19 @@
 // We'll also pass strings with special symbols, such as "2A3*3a2", "2A3 3a2", and "2_A3*3#A2".
 
 function palindrome(str) {
-  let newStr = str.replace(/\W/gi, '');
-  let revereStr = newStr.split('').reverse().join('')
-  
-  if(newStr.value === revereStr.value){
+  // We start by using a regular expression to remove all non-alphanumeric characters and make the string lowercase
+  let originalStr = str.replace(/[\W_]/gi, '').toLowerCase();
+  // We create a new variable in which we turn the string into an array, reverse it, and then turn it back into a string
+  let revereStr = newStr.split('').reverse().join('');
+  // We use an if statement to evaluate if the original string is the exact same as the reversed string
+  if(originalStr === revereStr){
     return true;
   } else {
     return false;
   }
+  
 }
 
 
 
-console.log(palindrome("ey  *%^elllll"));
+console.log(palindrome('_eye'));
