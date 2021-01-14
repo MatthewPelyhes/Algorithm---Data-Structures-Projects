@@ -9,7 +9,7 @@ function palindrome(str) {
   // We start by using a regular expression to remove all non-alphanumeric characters and make the string lowercase
   let originalStr = str.replace(/[\W_]/gi, '').toLowerCase();
   // We create a new variable in which we turn the string into an array, reverse it, and then turn it back into a string
-  let revereStr = newStr.split('').reverse().join('');
+  let revereStr = originalStr.split('').reverse().join('');
   // We use an if statement to evaluate if the original string is the exact same as the reversed string
   if(originalStr === revereStr){
     return true;
@@ -21,4 +21,4 @@ function palindrome(str) {
 
 
 
-console.log(palindrome('_eye'));
+// console.log(palindrome('_eye'));
