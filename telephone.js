@@ -8,3 +8,19 @@
 // 5555555555
 // 1 555 555 5555
 // For this challenge you will be presented with a string such as 800-692-7753 or 8oo-six427676;laskdjf. Your job is to validate or reject the US phone number based on any combination of the formats provided above. The area code is required. If the country code is provided, you must confirm that the country code is 1. Return true if the string is a valid US phone number; otherwise return false.
+
+function telephoneCheck(str) {
+  let newStr = str.replace(/\D/g,'')
+  
+  // if(newStr.length === 10){
+  //   return true
+  // } else if(newStr.length === 11 || newStr.charAt(0) === 1){
+  //   return true
+  // } else {
+  //   return false
+  // }
+ 
+  return newStr.charAt(0);
+}
+
+console.log(telephoneCheck("0 (757) 622-7382"));
