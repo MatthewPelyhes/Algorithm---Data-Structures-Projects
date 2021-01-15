@@ -12,15 +12,21 @@
 function telephoneCheck(str) {
   let newStr = str.replace(/\D/g,'')
   
-  // if(newStr.length === 10){
-  //   return true
-  // } else if(newStr.length === 11 || newStr.charAt(0) === 1){
-  //   return true
-  // } else {
-  //   return false
-  // }
- 
-  return newStr.charAt(0);
+  if(str.indexOf(`)`) - str.indexOf(`(`) > 4){
+    return false
+  } else if(str.startsWith(`-`)){
+    return false
+  } else if( str.includes('?')) {
+    return false
+  } else if(str.includes(')') && !str.includes('(') || str.includes('(') && !str.includes(')') ){
+    return false
+  } else if(newStr.length === 11  && newStr.charAt(0) === '1'){
+    return true
+  } else if(newStr.length === 10) {
+    return true
+  } else {
+    return false
+  }
 }
 
-console.log(telephoneCheck("0 (757) 622-7382"));
+console.log(telephoneCheck("(6054756961)"));
