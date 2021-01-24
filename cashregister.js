@@ -28,6 +28,18 @@
 //   ["ONE HUNDRED", 100]
 // ]
 
+const cashValues = {
+  Penny: 0.01,
+  Nickel: 0.05,
+  Dime: 0.1,
+  Quarter: 0.25,
+  One: 1,
+  Five: 5,
+  Ten: 10,
+  Twenty: 20,
+  OneHundred: 100
+}
+
 function checkCashRegister(price, cash, cid) {
   let changeDue = (cash - price).toFixed(2);
   let single = cid.reduce((el1, el2) => el1.concat(el2))
